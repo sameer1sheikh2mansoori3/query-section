@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Modern Website</title>
+    <style>
+        /* CSS for the Navbar */
+        body{
+            background-color: burlywood;
+        }
+        .navbar {
+            background-color:black;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* CSS for the Form */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" class="form-input" placeholder="Name" required>
+            <input type="text" class="form-input" placeholder="Case ID" required>
+            <input type="text" class="form-input" placeholder="Department" required>
+            <input type="email" class="form-input" placeholder="Email ID" required>
+            <input type="tel" class="form-input" placeholder="Phone Number" required>
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div>
+    <!--Start of Conferbot Script-->
+    <script type="text/javascript">
+        (function (d, s, id) {
+          var js,
+            el = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {
+            return;
+          }
+          js = d.createElement(s);
+          js.async = true;
+          js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+          js.id = id;
+          js.charset = 'UTF-8';
+          el.parentNode.insertBefore(js, el);
+          // Initializes the widget when the script is ready
+          js.onload = function () {
+              var w = window.ConferbotWidget("65012951bbb9eb4426fcbab1", "live_chat");
+          };
+        })(document, 'script', 'conferbot-js');
+      </script>
+      <!--End of Conferbot Script-->
+</body>
+</html>
